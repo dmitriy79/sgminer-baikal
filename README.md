@@ -1,6 +1,12 @@
 # sgminer-baikal
 Rebuild of Baikal`s SG Miner for Giant X10 / N
 
+sudo mkdir -p /var/cache/swap
+sudo fallocate -l 256M /var/cache/swap/swap0
+sudo chmod 0600 /var/cache/swap/swap0
+sudo mkswap /var/cache/swap/swap0
+sudo swapon /var/cache/swap/swap0
+
 Since the guys over at Baikal obviously have not made their version of SG Miner open source, lets do it for them!
 
 The purpose for this recovery and rebuild was to see if it was possible to overclock these miners, and unlock extra algos for X10. Its not identical to the included sgminer with baikal miners however its performance is pretty damn close after monitoring two days. Some code cleanup should have been done, its messy thats its there without any proper use - and some of them are additional code from me thats not needed or even not correct.
