@@ -1,11 +1,15 @@
 # sgminer-baikal
 Rebuild of Baikal`s SG Miner for Giant X10 / N
 
+Known issues when compiling or installing via apt
+If you run into an error such as "Killedg package lists… 99%", or other errors during compiling its because of low memory on the Pi. You need to add a swap which can be done as this:
+
 sudo mkdir -p /var/cache/swap
 sudo fallocate -l 256M /var/cache/swap/swap0
 sudo chmod 0600 /var/cache/swap/swap0
 sudo mkswap /var/cache/swap/swap0
 sudo swapon /var/cache/swap/swap0
+Included Softwares
 
 Since the guys over at Baikal obviously have not made their version of SG Miner open source, lets do it for them!
 
